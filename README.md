@@ -27,6 +27,7 @@ Install the dependencies for the `archiso` package:
     (root): pacman -S make squashfs-tools libisoburn dosfstools patch lynx devtools git
 
 Install archiso:
+
     (user): git clone git://projects.archlinux.org/archiso.git && cd archiso
     (root): make install && cd .. && rm -rf archiso
 
@@ -44,11 +45,11 @@ Default login:
 The system is loaded and runs entirely within ram, so it doesn't require any permanent storage mechanism.
 
 ## Todo
-PAM module for authentication
-WebDav link for home folder
-Selecting software needed
-Remove i686?
-Server/management registration?
-Custom mirror?
-PXE
-Branding (Splash Screen/Naming)
+- [ ] PAM module for authentication
+- [ ] WebDav link for home folder
+- [ ] Selecting software needed
+- [ ] Remove i686?
+- [ ] Server/management registration?
+- [ ] Custom mirror?
+- [ ] PXE
+- [ ] Branding (Splash Screen/Naming)
