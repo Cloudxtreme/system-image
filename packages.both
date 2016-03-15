@@ -72,3 +72,4 @@ xorg-server
 xorg-server-utils
 xorg-xinit
 zd1211-firmware
+python2

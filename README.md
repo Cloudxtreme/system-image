@@ -48,7 +48,6 @@ The system is loaded and runs entirely within ram, so it doesn't require any per
 - [ ] PAM module for authentication
 - [ ] WebDav link for home folder
 - [ ] Selecting software needed
-- [ ] Remove i686?
 - [ ] Server/management registration?
 - [ ] Custom mirror?
 - [ ] PXE
