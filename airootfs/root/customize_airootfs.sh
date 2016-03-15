@@ -24,5 +24,8 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 useradd -m -g users -G wheel student
 echo student:student | chpasswd
 
+# Set the root passwd temp
+echo root:root | chpasswd
+
 systemctl enable pacman-init.service choose-mirror.service gdm.service NetworkManager.service
 systemctl set-default graphical.target
