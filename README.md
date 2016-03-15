@@ -18,6 +18,7 @@ This is an unofficial prototype image being made by a computing student.
 - jre8-openjdk
 - jre8-openjdk-headless
 - eclipse-java
+- python2
 
 ## Setup
 Download and run the arch linux mainline iso.
