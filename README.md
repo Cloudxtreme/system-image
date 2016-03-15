@@ -9,16 +9,19 @@ It is still a work in progress, contributions are welcome.
 This is an unofficial prototype image being made by a computing student.
 
 ## Package changes from mainline archiso
-- base-devel
 - git
 - xorg
-- gnome
+- gnome (minimal)
 - networkmanager
 - jdk8-openjdk
 - jre8-openjdk
-- jre8-openjdk-headless
 - eclipse-java
 - python2
+- intellij-idea-community-edition
+- libvirt
+- qemu
+- virt-manager
+- vlc
 
 ## Setup
 Download and run the arch linux mainline iso.

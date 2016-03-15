@@ -27,5 +27,5 @@ echo student:student | chpasswd
 # Set the root passwd temp
 echo root:root | chpasswd
 
-systemctl enable pacman-init.service choose-mirror.service gdm.service NetworkManager.service
+systemctl enable pacman-init.service choose-mirror.service gdm.service NetworkManager.service libvirtd.service
 systemctl set-default graphical.target
