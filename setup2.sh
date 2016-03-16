@@ -13,8 +13,11 @@ echo root:root | chpasswd
 mkinitcpio -p linux
 
 # Install package
-pacman -S grub os-prober make squashfs-tools libisoburn dosfstools patch lynx devtools git --noconfirm
+pacman -S grub os-prober make squashfs-tools libisoburn dosfstools dhcp patch lynx devtools git --noconfirm
 
+# Activate Services
+systemctl enable dhcpcd
+# Install Grub
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -22,5 +25,4 @@ grub-mkconfig -o /boot/grub/grub.cfg
 git clone git://projects.archlinux.org/archiso.git && cd archiso
 make install && cd .. && rm -rf archiso
 
-echo "Finished setting up build environment. Rebooting in 5 seconds"
-exit
+echo "Finished setting up build environment. Type exit to poweroff"
