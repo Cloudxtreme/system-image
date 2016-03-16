@@ -27,7 +27,7 @@ This is an unofficial prototype image being made by a computing student.
 - xorg
 
 ## Setup
-Download and run the arch linux mainline iso.
+Download the [arch linux mainline iso](https://www.archlinux.org/download/), run it within a Virtual Machine, or boot from USB.
 
 Install the dependencies for the `archiso` package:
 ```bash
@@ -52,6 +52,10 @@ The iso is then placed within the out directory, e.g. bu-image-2016.03.16-x86_64
 Default login:
     Username: student
     Password: student
+
+Default root:
+    Username: root
+    Password: root
 
 The system is loaded and runs entirely within ram, so it doesn't require any permanent storage mechanism.
 
