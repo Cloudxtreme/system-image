@@ -27,12 +27,18 @@ This is an unofficial prototype image being made by a computing student.
 - xorg
 
 ## Setup
-Download the [arch linux mainline iso](https://www.archlinux.org/download/), run it within a Virtual Machine, or boot from USB.
+Download the [arch linux mainline iso](https://www.archlinux.org/download/), run it within a virtual machine, minimum 4GB Ram & 8GB hard drive.
 
-Install the dependencies for the `archiso` package:
 ```bash
-    (root): pacman -S make squashfs-tools libisoburn dosfstools patch lynx devtools git
+    wget https://github.com/BU-Computing/system-image/archive/master.tar.gz
+    tar xf master.gz
+    cd system-image-master
+    ./setup.sh
+    cd root
+    ./setup.sh
 ```
+
+The system will then power off, you can remove the iso image from the virtual machine and boot normally.
 
 Install archiso:
 ```bash

@@ -11,6 +11,12 @@ locale-gen
 echo LANG=en_GB.UTF-8 > /etc/locale.conf
 mkinitcpio -p linux
 echo root:root | chpasswd
-pacman -S make squashfs-tools libisoburn dosfstools patch lynx devtools git
+pacman -S grub os-prober make squashfs-tools libisoburn dosfstools patch lynx devtools git --noconfirm
 git clone git://projects.archlinux.org/archiso.git && cd archiso
 make install && cd .. && rm -rf archiso
+cd system-image
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+echo "Finished setting up build environment. Rebooting in 5 seconds"
+exit
