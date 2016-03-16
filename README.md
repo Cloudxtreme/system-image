@@ -34,7 +34,6 @@ Download the [arch linux mainline iso](https://www.archlinux.org/download/), run
     tar xf master.gz
     cd system-image-master
     ./setup.sh
-    cd root
     ./setup.sh
 ```
 

@@ -2,21 +2,25 @@
 
 set -e -u
 
-echo "Enter your desired hostname, followed by [ENTER]:"
-read computer_name
-echo $computer_name > /etc/hostname
+# Configuration
+echo "BUILD" > /etc/hostname
 ln -s /usr/share/zoneinfo/Europe/London /etc/localtime
 sed -i 's/#\(en_GB\.UTF-8\)/\1/' /etc/locale.gen
 locale-gen
-echo LANG=en_GB.UTF-8 > /etc/locale.conf
-mkinitcpio -p linux
 echo root:root | chpasswd
+
+# Build
+mkinitcpio -p linux
+
+# Install package
 pacman -S grub os-prober make squashfs-tools libisoburn dosfstools patch lynx devtools git --noconfirm
-git clone git://projects.archlinux.org/archiso.git && cd archiso
-make install && cd .. && rm -rf archiso
-cd system-image
+
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+
+# Install archiso
+git clone git://projects.archlinux.org/archiso.git && cd archiso
+make install && cd .. && rm -rf archiso
 
 echo "Finished setting up build environment. Rebooting in 5 seconds"
 exit
