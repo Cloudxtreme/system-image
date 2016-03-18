@@ -18,6 +18,7 @@ This is an unofficial prototype image being made by a computing student.
 - intellij-idea-community-edition
 - jdk8-openjdk
 - jre8-openjdk
+- libreoffice
 - libvirt
 - networkmanager
 - python2
